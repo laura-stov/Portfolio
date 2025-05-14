@@ -1,0 +1,129 @@
+### Requisição para a raiz da aplicação
+GET http://localhost:5274
+
+// ------ LIVROS -------
+
+### Requisição para listar livros
+GET http://localhost:5274/biblioteca/livro/listar
+
+### Requisição para cadastrar livros
+POST http://localhost:5274/biblioteca/livro/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Tudo é Rio",
+    "qtdExemplares": 3,
+    "anoLancamento": 2024,
+    "genero": "Drama",
+    "editora": "Record",
+    "autorId": "7249d53c-b07d-4a6f-99f8-16a3be63c2a9"
+}
+
+### Requisição para deletar livro especifico
+DELETE http://localhost:5274/biblioteca/livro/deletar/8c0096fd-7242-40a0-8093-2da8e6781002
+
+### Requisição para alterar livro específico
+PUT http://localhost:5274/biblioteca/livro/alterar/1d626b02-5d64-488c-a34d-ff588737f783
+Content-Type: application/json
+
+{
+    "autorId": "5aa5ca0c-0f3f-4acb-9eb2-effc1a1938fa"
+}
+
+### Buscar livro específico pelo id
+GET http://localhost:5274/biblioteca/livro/buscar/5d06b6e2-3635-45ba-aa41-4db1242a40ca
+
+// ------ AUTORES -------
+
+### Listar autores
+GET http://localhost:5274/biblioteca/autor/listar
+
+### Cadastrar autores
+POST http://localhost:5274/biblioteca/autor/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Carla",
+    "sobrenome": "Madeira",
+    "pais": "Brasil"
+}
+
+### Deletar autor pelo id
+DELETE http://localhost:5274/biblioteca/autor/deletar/4ea5a38e-fd33-42b4-9de4-b6585a9ee93d
+
+### Alterar autor pelo id
+PUT http://localhost:5274/biblioteca/autor/alterar/72a5ba9c-0e8b-4513-a073-1820b87e6a7b
+Content-Type: application/json
+
+{
+    "nome": "Carla",
+    "sobrenome": "Madeira",
+    "pais": "Brasil"
+}
+
+### Buscar autor pelo id
+GET http://localhost:5274/biblioteca/autor/buscar/4b29201d-c727-445f-8fed-376a440ac579
+
+// ------ LEITORES -------
+
+### Listar leitores/clientes
+GET http://localhost:5274/biblioteca/leitor/listar
+
+### Cadastrar leitores/clientes
+POST http://localhost:5274/biblioteca/leitor/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Laura",
+    "sobrenome": "Santos Oliveira",
+    "telefone": "(41) 99187-8044",
+    "email": "laura.oliveira4@cs.up.edu.br",
+    "cpf": "11144477735"
+}
+
+### Deletar leitor/cliente pelo id
+DELETE http://localhost:5274/biblioteca/leitor/deletar/5d54b22c-819b-4561-9402-5c6645afedae
+
+### Buscar leitor/cliente pelo id
+GET http://localhost:5274/biblioteca/leitor/buscar/5d54b22c-819b-4561-9402-5c6645afedae
+
+### Alterar leitor/cliente pelo id
+PUT http://localhost:5274/biblioteca/leitor/alterar/5d54b22c-819b-4561-9402-5c6645afedae
+Content-Type: application/json
+
+{
+    "nome": "Yasmin",
+    "sobrenome": "Faraj",
+    "telefone": "(42) 99999-1111",
+    "email": "yasmin.faraj@cs.up.edu.br",
+    "cpf": "11144477735"
+}
+
+// ------ EMPRÉSTIMOS/DEVOLUÇÃO ------
+
+### Listar empréstimos ativos (não foram devolvidos)
+GET http://localhost:5274/biblioteca/emprestimo/listar
+
+### Realizar a ficha do empréstimo
+POST http://localhost:5274/biblioteca/emprestimo/ficha
+Content-Type: application/json
+
+{
+    "livroId": "927a1d15-a111-41ee-987e-c81f7167713e",
+    "leitorId": "8f9c0845-b129-4a30-9fa5-059f772f5721"
+}
+
+### Devolver livro
+PUT http://localhost:5274/biblioteca/emprestimo/devolver/439eb549-4f75-4c3e-b337-777c8f51bdbf
+
+### Alterar empréstimo pelo id
+PUT http://localhost:5274/biblioteca/emprestimo/alterar/e7a73481-2e46-4ea1-a499-f779fc7ef547
+Content-Type: application/json
+
+{
+    "livroId": "1ba714ed-fc34-4af1-a519-da26e88c3a3e",
+    "leitorId": "21be8aa3-b5a2-4d05-9708-a5b6c4cd698c"
+}
+
+### Lista de devoluções
+GET http://localhost:5274/biblioteca/devolucao/listar
