@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Tarefas{% endblock %}
+
+{% block content %}
+<!--As tarefas não ocupam a tela toda, somente 10 colunas, e tem espaçamento de 1-->
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de Tarefas</h1>
+    <div class="container dashboard">
+        <div class="col-4 dashboard-box" id="dashboard-lastdays">
+            <h4>Finalizadas nos últimos 30 dias</h4>
+            <span>{{ tarefasrecentes }}</span>
+        </div>
+        <div class="col-4 dashboard-box" id="dashboard-done">
+            <h4>Tarefas finalizadas</h4>
+            <span>{{ tarefasfeitas }}</span>
+        </div>
+        <div class="col-4 dashboard-box" id="dashboard-doing">
+            <h4>Tarefas para fazer</h4>
+            <span>{{ tarefasfazendo }}</span>
+        </div>
+        <div class="col-4 dashboard-box" id="dashboard-pending">
+            <h4>Tarefas pendentes</h4>
+            <span>{{ tarefaspendentes }}</span>
+        </div>
+    </div>
+    <a id="add-link" href="novatarefa/">
+        <div class="col-2 add-div">
+            <!--Ícone de + e Font Awesome para ícones-->
+            <i class="fas fa-plus"></i> Adicionar tarefa
+        </div>
+    </a>
+    <div class="col-9 search-div">
+        <form method="GET" id="search-form">
+            <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome da tarefa para buscar..." value="{{ request.GET.search}}">
+            <i class="fas fa-search" id="search-btn"></i>
+        </form>
+    </div>
+    <div class="col-12 filter-div">
+        <span>Filtrar por:</span>
+        <select name="filter" id="filter" class="form-control">
+            <option value="">Escolha uma opção</option>
+            <option value="done">Tarefas concluídas</option>
+            <option value="doing">Tarefas não feitas</option>
+            <option value="pending">Tarefas pendentes</option>
+        </select>
+    </div>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="alert {{message.tags}}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <ul class="task-list">
+        {% for tarefa in tarefas %}
+        <li class="task-item {% if tarefa.done == 'pending' %}pending{% elif tarefa.done == 'done' %}done{% endif %}">
+            <form method="POST" action="{% url 'alterar-status' tarefa.id %}" style="display:inline;">
+                {% csrf_token %}
+                <span><a href="/tarefa/{{ tarefa.id }}">{{ tarefa.titulo }}</a></span>
+                <select id="status" name="status" onchange="this.form.submit()">
+                    <option value="doing" {% if tarefa.done == 'doing' %}selected{% endif %}>Em andamento</option>
+                    <option value="done" {% if tarefa.done == 'done' %}selected{% endif %}>Concluída</option>
+                    <option value="pending" {% if tarefa.done == 'pending' %}selected{% endif %}>Pendente</option>
+                </select>
+            </form>
+            <a href="excluir/{{ tarefa.id }}" class="deleta-btn"><span><i class="fas fa-trash"></i></span></a>
+            <a href="editar/{{ tarefa.id }}"><span><i class="fas fa-edit"></i></span></a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="paginacao">
+        <span class="steplinks">
+            {% if tarefas.has_previous %}
+                <a href="?pagina={{ tarefas.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+
+            {% if tarefas.paginator.num_pages %}
+            <span class="current">
+                {{ tarefas.number }} de {{ tarefas.paginator.num_pages }}
+            </span>
+            {% endif %}
+
+            {% if tarefas.has_next %}
+                <a href="?pagina={{ tarefas.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}
