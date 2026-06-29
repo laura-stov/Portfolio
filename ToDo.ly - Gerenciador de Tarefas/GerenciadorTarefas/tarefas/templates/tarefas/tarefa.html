@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block title %}Lista de Tarefas{% endblock %}
@@ -11,4 +12,19 @@
     <a href="/editar/{{ tarefa.id }}" class="btn btn-primary">Editar</a>
     <a href="/excluir/{{ tarefa.id }}" class="btn btn-danger">Excluir</a>
 </div>
+=======
+{% extends 'base.html' %}
+
+{% block title %}Lista de Tarefas{% endblock %}
+
+{% block content %}
+<!--As tarefas não ocupam a tela toda, somente 10 colunas, e tem espaçamento de 1-->
+<div class="offset-1 col-10 list-div">
+    <h1>{{tarefa.titulo}}</h1>
+    <p>{{tarefa.descricao}}</p> 
+    <p><strong>Status:</strong> {{ tarefa.get_done_display }}</p>
+    <a href="/editar/{{ tarefa.id }}" class="btn btn-primary">Editar</a>
+    <a href="/excluir/{{ tarefa.id }}" class="btn btn-danger">Excluir</a>
+</div>
+>>>>>>> e3538acd12e77e740b8ff1fd993c39a8ba873cd9
 {% endblock %}

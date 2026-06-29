@@ -1,0 +1,12 @@
+pandas
+numpy
+geopy
+requests
+openrouteservice
+streamlit
+folium
+streamlit-folium
+pytest
+pandas
+maplotlib
+seaborn

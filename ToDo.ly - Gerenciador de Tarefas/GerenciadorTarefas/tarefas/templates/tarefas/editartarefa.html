@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
@@ -15,4 +16,23 @@
         <input type="submit" class="btn btn-success" value="Editar Tarefa">
     </form>
 </div>
+=======
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Editando '{{tarefa.titedlo}}'{% endblock %}
+
+{% block content %}
+<!--As tarefas não ocupam a tela toda, somente 10 colunas, e tem espaçamento de 1-->
+<div class="offset-1 col-10 list-div">
+    <h1>Editando '{{tarefa.titulo}}'</h1>
+    <form method="POST">
+        <!--Se criar form no django tem que ter isso abaixo-->
+        {% csrf_token %}
+        <!--Imprime os campos do formulario (titulo e descricao) cada um em um paragrafo-->
+        {{ formulario|crispy }}
+        <input type="submit" class="btn btn-success" value="Editar Tarefa">
+    </form>
+</div>
+>>>>>>> e3538acd12e77e740b8ff1fd993c39a8ba873cd9
 {% endblock %}
