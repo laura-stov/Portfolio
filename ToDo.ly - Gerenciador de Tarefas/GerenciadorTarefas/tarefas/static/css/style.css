@@ -1,0 +1,214 @@
+.container-fluid{
+    padding: 0px;
+}
+
+.container-fluid .row{
+    margin: 0;
+}
+/*Navbar*/
+
+.navbar{
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.navbar-nav{
+    margin: auto;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-light, .navbar-nav, a.nav-link{
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/*Dashboard*/
+
+.dashboard{
+    padding: 0px;
+    width: 100%;
+    display: block;
+}
+
+.dashboard h4{
+    font-size: 20px;
+}
+
+.dashboard span{
+    font-size: 40px;
+    display: block;
+    width: 100%;
+}
+
+.dashboard-box{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    float: left;
+    background-color: #dfdfdf;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 130px;
+    width: 23.5%;
+    text-align: center;
+}
+
+.dashboard-box:nth-child(2){
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.dashboard-box:nth-child(3){
+    margin-right: 1.5%;
+}
+
+#dashboard-lastdays{
+    background-color: #5884ad;
+}
+
+#dashboard-doing{
+    background-color: #f5c62c;
+}
+
+#dashboard-pending{
+    background-color: #f52c2c;
+}
+
+/*Botão Adicionar*/
+
+#add-link{
+    text-decoration: none;
+}
+
+.add-div{
+    background-color: #5884ad;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.fas.fa-plus{
+    color: #FFF;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/*Search*/
+
+.fas.fa-search{
+    position: absolute;
+    top: 12px;
+    right: 26px;
+    cursor: pointer;
+}
+
+.search-div{
+    position: relative;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/*Filtro*/
+
+.filter-div{
+    margin-bottom: 15px;
+    padding: 0px
+}
+
+#filter{
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
+/*Lista de Tarefas*/
+
+.list-div{
+    padding: 0;
+}
+
+.task-list{
+    padding-left: 0;
+}
+
+.task-item span a {
+    color: #333; 
+    text-decoration: none; 
+}
+
+.task-item span a:hover {
+    color: #007bff; 
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+}
+
+.fas.fa-trash, .fas.fa-edit{
+    cursor: pointer;
+    margin: 5px;
+    font-size: 20px;
+    float: right;
+}
+
+.fas.fa-trash{
+    color: #f52c2c;
+}
+
+/*Status*/
+
+.status-filter-div{
+    margin-bottom: 15px;
+    padding: 0px
+}
+
+#status-filter{
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
+/*Messages*/
+
+ul.messages{
+    padding: 0;
+}
+
+ul.messages li{
+    list-style: none;
+}
+
+/*Paginação*/
+
+.paginacao{
+    margin-bottom: 20px;
+}
+
+.steplinks{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steplinks .current{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*Login*/
+
+.auth-card{
+    margin-bottom: 30px;
+}
+
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
+}
