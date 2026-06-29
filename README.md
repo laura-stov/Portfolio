@@ -6,14 +6,14 @@ Meu objetivo é aplicar minha base técnica (Python, SQL, C#, Java) para criar s
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Dados & IA:** Python (Pandas, Scikit-learn), SQL Server, Automação (n8n, Make), Visão Computacional.
 * **Backend & Web:** .NET (C#), Flask, APIs REST.
 * **Base Técnica:** Java, C, Kotlin, Git, Estruturas de Dados e Algoritmos.
 
 ---
 
-## 📂 Projetos em Destaque (Data Science & IA)
+## Projetos em Destaque (Data Science & IA)
 *Estes projetos representam meu foco atual em análise preditiva e inteligência artificial.*
 
 - [**Otimização de Rotas Logísticas**](Otimização de Rotas Logísticas/): Implementação de algoritmos de otimização (Branch and Bound/TSP) com visualização em dashboards para suporte à decisão logística.
@@ -22,7 +22,7 @@ Meu objetivo é aplicar minha base técnica (Python, SQL, C#, Java) para criar s
 
 ---
 
-## 🏗 Engenharia de Software (Base Técnica)
+## Engenharia de Software (Base Técnica)
 *Projetos que consolidam minha formação acadêmica e lógica de programação.*
 
 - **.NET Projects:**
@@ -35,7 +35,7 @@ Meu objetivo é aplicar minha base técnica (Python, SQL, C#, Java) para criar s
 
 ---
 
-## 📬 Contato
+## Contato
 Vamos conversar sobre tecnologia e dados?
 * **LinkedIn:** [Acesse meu perfil](https://www.linkedin.com/in/laura-oliveira-869024288)
 * **GitHub:** [laura-stov](https://github.com/laura-stov)
