@@ -16,9 +16,9 @@ Meu objetivo é aplicar minha base técnica (Python, SQL, C#, Java) para criar s
 ## Projetos em Destaque (Data Science & IA)
 *Estes projetos representam meu foco atual em análise preditiva e inteligência artificial.*
 
-- [**Otimização de Rotas Logísticas**](Otimização de Rotas Logísticas/): Implementação de algoritmos de otimização (Branch and Bound/TSP) com visualização em dashboards para suporte à decisão logística.
-- [**Aplicacao Web com Análise de dados**](Aplicacao Web com Análise de dados/): Desenvolvimento de uma aplicação web integrada a análise de dados, demonstrando minha capacidade de criar soluções fim-a-fim.
-- [**Reconhecimento de Gestos por Visão Computacional**](Reconhecimento de Gestos por Visão Computacional/): Projeto focado em processamento de imagens e detecção de padrões.
+- [**Otimização de Rotas Logísticas**]: Implementação de algoritmos de otimização (Branch and Bound/TSP) com visualização em dashboards para suporte à decisão logística.
+- [**Aplicacao Web com Análise de dados**]: Desenvolvimento de uma aplicação web integrada a análise de dados, demonstrando minha capacidade de criar soluções fim-a-fim.
+- [**Reconhecimento de Gestos por Visão Computacional**]: Projeto focado em processamento de imagens e detecção de padrões.
 
 ---
 
@@ -29,9 +29,9 @@ Meu objetivo é aplicar minha base técnica (Python, SQL, C#, Java) para criar s
     - [Gerenciar Estacionamento](.NET/GerenciarEstacionamento/): Sistema de gestão em C# focado em manipulação de objetos e regras de negócio.
     - [Sistema Hospedagem](.NET/SistemaHospedagem/): Aplicação em C# demonstrando modelagem de dados.
 - **Outros:**
-    - [ToDo.ly](ToDo.ly - Gerenciador de Tarefas/): Gerenciador de tarefas.
-    - [Projeto Selenium](Projeto Selenium/): Automação web.
-    - [Sistema para Bibliotecas/Pizzaria](Sistema para Bibliotecas Públicas/): Projetos de lógica estruturada.
+    - [ToDo.ly]: Gerenciador de tarefas.
+    - [Projeto Selenium]: Automação web.
+    - [Sistema para Bibliotecas/Pizzaria]: Projetos de lógica estruturada.
 
 ---
 
