@@ -1,0 +1,5 @@
+# Dados locais (posição do cartão, preferências e log de uso)
+dados/
+
+# Saídas de diagnóstico e backups
+*.bak
