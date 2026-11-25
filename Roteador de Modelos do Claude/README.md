@@ -12,6 +12,10 @@ Escolhe sozinho o **modelo** (Haiku, Sonnet, Opus) e o **nível de esforço** (B
 4. O roteador decide se **mantém ou troca** e muda o seletor do Claude Desktop (cliques por UI Automation).
 5. Um cartão mostra a decisão. **Enter** envia, **Esc** cancela. Com a chave "Enviar automaticamente", o prompt segue sozinho depois de 3 s.
 
+<p align="center">
+  <img src="docs/cartao.png" alt="Cartão com a decisão do roteador" width="460">
+</p>
+
 ### Regra de decisão (manter ou trocar)
 
 Trocar modelo ou esforço no meio de uma conversa faz o histórico ser relido, o que custa mais. Por isso:
@@ -76,6 +80,7 @@ roteador-claude/
 ├── ferramentas/              # só para adaptar o projeto a outra versão/idioma
 │   ├── diagnostico-ui.ps1    # lista os controles da janela
 │   └── achar-conversa.ps1    # mostra o que identifica a conversa aberta
+├── docs/                     # imagens do README
 ├── dados/                    # criada sozinha; posição do cartão e log de uso (não vai ao Git)
 ├── LICENSE
 └── README.md
