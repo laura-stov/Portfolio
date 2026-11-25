@@ -43,3 +43,9 @@ foreach ($e in $todos) {
 }
 $l | Select-Object -First 80 | Out-File -Encoding utf8 $saida
 "Pronto: $saida"
+
+# Mostra onde o arquivo foi gravado, abre a pasta e espera (a janela nao fecha sozinha).
+Write-Host ""
+Write-Host "Arquivo: $saida"
+if (Test-Path $saida) { Start-Process explorer.exe -ArgumentList "/select,`"$saida`"" }
+Read-Host "Aperte Enter para fechar"

@@ -86,7 +86,11 @@ roteador-claude/
 └── README.md
 ```
 
-As ferramentas gravam a saída em `%TEMP%`. Ela pode conter nomes de conversas: apague e não publique.
+### Onde ficam os arquivos gerados
+
+- `ferramentas/diagnostico-ui.ps1` e `ferramentas/achar-conversa.ps1` gravam em `%TEMP%` (`diagnostico-ui.txt` e `achar-conversa.txt`). Ao terminar, mostram o caminho e abrem o Explorer com o arquivo selecionado. A saída tem texto da tela, como títulos de conversas, e por isso fica fora da pasta do projeto: assim não vai parar no Git por engano. Apague depois de usar e não publique.
+- `scripts/mudar-modelo.ps1` e `scripts/contexto.ps1` não geram arquivo para o usuário. O roteador os chama e lê o resultado em arquivos temporários, apagados logo depois. Só o `mudar-modelo.ps1` grava `%TEMP%\roteador-debug.txt`, quando algo dá errado.
+- Posição do cartão e log de uso ficam em `dados/`, ignorada pelo Git.
 
 ## Licença
 

@@ -6,7 +6,8 @@ $janela = Get-Process | Where-Object { $_.ProcessName -eq 'claude' -and $_.MainW
 $saida = Join-Path $env:TEMP 'diagnostico-ui.txt'
 
 if (-not $janela) {
-    'Janela do Claude nao encontrada.'
+    Write-Host 'Janela do Claude nao encontrada.'
+    Read-Host 'Aperte Enter para fechar'
     exit
 }
 
@@ -21,4 +22,10 @@ $linhas = foreach ($e in $todos) {
     }
 }
 $linhas | Out-File -Encoding utf8 $saida
-"Pronto: $saida ($($linhas.Count) controles). Apague o arquivo depois de usar."
+Write-Host "Pronto: $($linhas.Count) controles. Apague o arquivo depois de usar."
+
+# Mostra onde o arquivo foi gravado, abre a pasta e espera (a janela nao fecha sozinha).
+Write-Host ""
+Write-Host "Arquivo: $saida"
+if (Test-Path $saida) { Start-Process explorer.exe -ArgumentList "/select,`"$saida`"" }
+Read-Host "Aperte Enter para fechar"
